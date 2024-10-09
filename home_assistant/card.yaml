@@ -1,0 +1,11 @@
+type: entities
+entities:
+  - entity: climate.fil_pilote
+    type: custom:climate-mode-entity-row
+    modes:
+      - hvac_mode: heat
+      - hvac_mode: heat_cool
+        icon: mdi:leaf
+      - hvac_mode: cool
+      - hvac_mode: 'off'
+

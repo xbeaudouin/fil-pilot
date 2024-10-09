@@ -1,0 +1,21 @@
+##
+## Fil Pilot using MQTT
+##
+- name: "Fil Pilote"
+  unique_id: fil_pilot
+  payload_on: 1
+  payload_off: 0
+  modes:
+    - heat
+    - heat_cool
+    - cool
+    - 'off'
+  mode_state_topic: "filpilot/Status"
+  mode_state_template: >-
+    {% set values = { 'Off':'off', 'Hors-Gel':'cool', 'Eco':'heat_cool', 'Confort':'heat'} %}
+    {{ values[value] if value in values.keys() else 'off' }}
+  mode_command_topic: "filpilot/set"
+  mode_command_template: >-
+    {% set values = { 'off':'Off', 'cool':'Hors-Gel', 'heat_cool':'Eco', 'heat':'Confort'} %}
+    {{ values[value] if value in values.keys() else 'Off' }}
+  availability_topic: "filpilot/availability"
