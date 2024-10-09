@@ -8,3 +8,7 @@ Several Directories :
 `Arduino/` : The Arduino source code
 `kicad/` : The kicard pcb and schematics
 `home_assistant/` : Some Home Assistant stuff
+
+# TODO
+
+Finish documentation 
