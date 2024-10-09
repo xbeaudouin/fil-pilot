@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Pilot_Wire_v1-rescue)(type Legacy)(uri ${KIPRJMOD}/Pilot_Wire_v1-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,523 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Gestion Fil-Pilote OpenSource"
+Date "2020-11-15"
+Rev "1.0"
+Comp "Xavier Beaudouin"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP-12E U1
+U 1 1 5F97CE9A
+P 4300 2000
+F 0 "U1" H 4300 2981 50  0000 C CNN
+F 1 "ESP-12F" H 4300 2890 50  0000 C CNN
+F 2 "RF_Modules:ESP-12E" H 4300 2000 50  0001 C CNN
+F 3 "http://wiki.ai-thinker.com/_media/esp8266/esp8266_series_modules_user_manual_v1.1.pdf" H 3950 2100 50  0001 C CNN
+	1    4300 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D1
+U 1 1 5F97FDC5
+P 2700 4900
+F 0 "D1" V 2654 4979 50  0000 L CNN
+F 1 "1N4007" V 2745 4979 50  0000 L CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2700 4725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2700 4900 50  0001 C CNN
+	1    2700 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D2
+U 1 1 5F9811DD
+P 2700 4250
+F 0 "D2" V 2746 4171 50  0000 R CNN
+F 1 "1N4007" V 2655 4171 50  0000 R CNN
+F 2 "Diodes_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2700 4075 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 2700 4250 50  0001 C CNN
+	1    2700 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Pilot_Wire_v1-rescue:MOC3041M-Relay_SolidState U2
+U 1 1 5F981F7B
+P 4300 4350
+F 0 "U2" H 4300 4033 50  0000 C CNN
+F 1 "MOC3041M" H 4300 4124 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 4100 4150 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3031M.pdf" H 4265 4350 50  0001 L CNN
+	1    4300 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Pilot_Wire_v1-rescue:MOC3041M-Relay_SolidState U3
+U 1 1 5F984246
+P 4300 5000
+F 0 "U3" H 4300 4683 50  0000 C CNN
+F 1 "MOC3041M" H 4300 4774 50  0000 C CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_LongPads" H 4100 4800 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/MO/MOC3031M.pdf" H 4265 5000 50  0001 L CNN
+	1    4300 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F986F7C
+P 5250 4450
+F 0 "R4" V 5043 4450 50  0000 C CNN
+F 1 "120" V 5134 4450 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5180 4450 50  0001 C CNN
+F 3 "~" H 5250 4450 50  0001 C CNN
+	1    5250 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F987941
+P 5250 5100
+F 0 "R5" V 5043 5100 50  0000 C CNN
+F 1 "120" V 5134 5100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5180 5100 50  0001 C CNN
+F 3 "~" H 5250 5100 50  0001 C CNN
+	1    5250 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Converter_ACDC:HLK-PM03 PS1
+U 1 1 5F98A16F
+P 1900 1550
+F 0 "PS1" H 1900 1875 50  0000 C CNN
+F 1 "HLK-PM03" H 1900 1784 50  0000 C CNN
+F 2 "Power_Supply:HLK-PM03" H 1900 1250 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=59" H 2300 1200 50  0001 C CNN
+	1    1900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F98AAE7
+P 2800 1900
+F 0 "#PWR0101" H 2800 1650 50  0001 C CNN
+F 1 "GND" H 2805 1727 50  0000 C CNN
+F 2 "" H 2800 1900 50  0001 C CNN
+F 3 "" H 2800 1900 50  0001 C CNN
+	1    2800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1650 2500 1650
+Wire Wire Line
+	2800 1650 2800 1900
+$Comp
+L power:+3.3V #PWR0102
+U 1 1 5F98BD06
+P 2500 1250
+F 0 "#PWR0102" H 2500 1100 50  0001 C CNN
+F 1 "+3.3V" H 2515 1423 50  0000 C CNN
+F 2 "" H 2500 1250 50  0001 C CNN
+F 3 "" H 2500 1250 50  0001 C CNN
+	1    2500 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5F98E85F
+P 4300 800
+F 0 "#PWR0103" H 4300 650 50  0001 C CNN
+F 1 "+3.3V" H 4315 973 50  0000 C CNN
+F 2 "" H 4300 800 50  0001 C CNN
+F 3 "" H 4300 800 50  0001 C CNN
+	1    4300 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1450 2500 1450
+Wire Wire Line
+	2500 1450 2500 1400
+$Comp
+L power:GND #PWR0104
+U 1 1 5F98F488
+P 4300 3000
+F 0 "#PWR0104" H 4300 2750 50  0001 C CNN
+F 1 "GND" H 4305 2827 50  0000 C CNN
+F 2 "" H 4300 3000 50  0001 C CNN
+F 3 "" H 4300 3000 50  0001 C CNN
+	1    4300 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 2700 4300 2800
+$Comp
+L Device:CP C1
+U 1 1 5F98FDDD
+P 3650 900
+F 0 "C1" V 3395 900 50  0000 C CNN
+F 1 "10uF" V 3486 900 50  0000 C CNN
+F 2 "Capacitors_THT:CP_Radial_D5.0mm_P2.50mm" H 3688 750 50  0001 C CNN
+F 3 "~" H 3650 900 50  0001 C CNN
+	1    3650 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5F9912B5
+P 3250 900
+F 0 "#PWR0105" H 3250 650 50  0001 C CNN
+F 1 "GND" V 3255 772 50  0000 R CNN
+F 2 "" H 3250 900 50  0001 C CNN
+F 3 "" H 3250 900 50  0001 C CNN
+	1    3250 900 
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5F991EBD
+P 3400 1400
+F 0 "R1" V 3193 1400 50  0000 C CNN
+F 1 "12K" V 3284 1400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3285 1400 50  0001 C CNN
+F 3 "~" H 3400 1400 50  0001 C CNN
+	1    3400 1400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F992EE9
+P 3400 1600
+F 0 "R2" V 3193 1600 50  0000 C CNN
+F 1 "12K" V 3284 1600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3330 1600 50  0001 C CNN
+F 3 "~" H 3400 1600 50  0001 C CNN
+	1    3400 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4300 800  4300 900 
+Wire Wire Line
+	3800 900  4300 900 
+Connection ~ 4300 900 
+Wire Wire Line
+	4300 900  4300 1200
+Wire Wire Line
+	3250 900  3500 900 
+Wire Wire Line
+	3550 1400 3700 1400
+Wire Wire Line
+	3550 1600 3700 1600
+Wire Wire Line
+	3250 1400 3000 1400
+Connection ~ 2500 1400
+Wire Wire Line
+	2500 1400 2500 1250
+Wire Wire Line
+	3250 1600 3000 1600
+Wire Wire Line
+	3000 1600 3000 1400
+Connection ~ 3000 1400
+$Comp
+L Connector:Conn_01x05_Female J2
+U 1 1 5F99A0FB
+P 7350 1250
+F 0 "J2" H 7378 1276 50  0000 L CNN
+F 1 "Prog" H 7378 1185 50  0000 L CNN
+F 2 "footprints:Pin_Header_Straight_1x05_Pitch2.54mm" H 7350 1250 50  0001 C CNN
+F 3 "~" H 7350 1250 50  0001 C CNN
+	1    7350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5F99B79E
+P 6950 1450
+F 0 "#PWR0106" H 6950 1200 50  0001 C CNN
+F 1 "GND" V 6955 1322 50  0000 R CNN
+F 2 "" H 6950 1450 50  0001 C CNN
+F 3 "" H 6950 1450 50  0001 C CNN
+	1    6950 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0107
+U 1 1 5F99BF4F
+P 6950 1050
+F 0 "#PWR0107" H 6950 900 50  0001 C CNN
+F 1 "+3.3V" V 6965 1178 50  0000 L CNN
+F 2 "" H 6950 1050 50  0001 C CNN
+F 3 "" H 6950 1050 50  0001 C CNN
+	1    6950 1050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 1050 7150 1050
+Wire Wire Line
+	6950 1450 7150 1450
+Wire Wire Line
+	6600 1700 6600 1350
+Wire Wire Line
+	6600 1350 7150 1350
+Wire Wire Line
+	4900 1700 6600 1700
+Wire Wire Line
+	4900 1500 6500 1500
+Wire Wire Line
+	6500 1500 6500 1250
+Wire Wire Line
+	6500 1250 7150 1250
+Wire Wire Line
+	4900 1400 5700 1400
+Wire Wire Line
+	6400 1400 6400 1150
+Wire Wire Line
+	6400 1150 7150 1150
+$Comp
+L Device:R R7
+U 1 1 5F9A6D39
+P 5700 1050
+F 0 "R7" H 5630 1004 50  0000 R CNN
+F 1 "12K" H 5630 1095 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5630 1050 50  0001 C CNN
+F 3 "~" H 5700 1050 50  0001 C CNN
+	1    5700 1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 5F9A8B18
+P 5700 700
+F 0 "#PWR0108" H 5700 550 50  0001 C CNN
+F 1 "+3.3V" H 5715 873 50  0000 C CNN
+F 2 "" H 5700 700 50  0001 C CNN
+F 3 "" H 5700 700 50  0001 C CNN
+	1    5700 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 700  5700 800 
+Wire Wire Line
+	5700 1200 5700 1400
+Connection ~ 5700 1400
+Wire Wire Line
+	5700 1400 6400 1400
+$Comp
+L Device:R R6
+U 1 1 5F9A9846
+P 5350 1050
+F 0 "R6" H 5280 1004 50  0000 R CNN
+F 1 "12K" H 5280 1095 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5280 1050 50  0001 C CNN
+F 3 "~" H 5350 1050 50  0001 C CNN
+	1    5350 1050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5350 1200 5350 1600
+Wire Wire Line
+	5350 1600 4900 1600
+Wire Wire Line
+	5350 900  5350 800 
+Wire Wire Line
+	5350 800  5700 800 
+Connection ~ 5700 800 
+Wire Wire Line
+	5700 800  5700 900 
+Text Notes 7550 1450 0    50   ~ 0
+3V3\nGPIO0\nTXD\nRXD\nGND
+$Comp
+L Connector:Conn_01x03_Male J1
+U 1 1 5F9B1D35
+P 1650 2450
+F 0 "J1" H 1622 2382 50  0000 R CNN
+F 1 "220V + FP" H 1622 2473 50  0000 R CNN
+F 2 "TerminalBlocks_Phoenix:TerminalBlock_Phoenix_MPT-2.54mm_3pol" H 1650 2450 50  0001 C CNN
+F 3 "~" H 1650 2450 50  0001 C CNN
+	1    1650 2450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4600 4250 4850 4250
+Wire Wire Line
+	4850 4250 4850 2800
+Wire Wire Line
+	4850 2800 4300 2800
+Connection ~ 4300 2800
+Wire Wire Line
+	4300 2800 4300 3000
+Wire Wire Line
+	4850 4250 4850 4900
+Wire Wire Line
+	4850 4900 4600 4900
+Connection ~ 4850 4250
+Wire Wire Line
+	5100 4450 4600 4450
+Wire Wire Line
+	5100 5100 4600 5100
+$Comp
+L Device:R R3
+U 1 1 5F9D4D61
+P 5200 2650
+F 0 "R3" H 5130 2604 50  0000 R CNN
+F 1 "12K" H 5130 2695 50  0000 R CNN
+F 2 "Resistors_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 5130 2650 50  0001 C CNN
+F 3 "~" H 5200 2650 50  0001 C CNN
+	1    5200 2650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4900 2300 5200 2300
+Wire Wire Line
+	5200 2300 5200 2500
+Wire Wire Line
+	5200 2800 4850 2800
+Connection ~ 4850 2800
+Wire Wire Line
+	4900 2200 5450 2200
+Wire Wire Line
+	5450 2200 5450 4450
+Wire Wire Line
+	5450 4450 5400 4450
+Wire Wire Line
+	4900 2100 5550 2100
+Wire Wire Line
+	5550 2100 5550 5100
+Wire Wire Line
+	5550 5100 5400 5100
+NoConn ~ 3700 1800
+NoConn ~ 3700 2000
+NoConn ~ 3700 2100
+NoConn ~ 3700 2200
+NoConn ~ 3700 2300
+NoConn ~ 3700 2400
+NoConn ~ 3700 2500
+NoConn ~ 4900 2400
+NoConn ~ 4900 2000
+NoConn ~ 4900 1900
+NoConn ~ 4900 1800
+NoConn ~ 7350 7250
+Text GLabel 1300 1450 0    50   Input ~ 0
+AC1
+Text GLabel 1300 1650 0    50   Input ~ 0
+AC2
+Wire Wire Line
+	1500 1450 1400 1450
+Wire Wire Line
+	1500 1650 1400 1650
+Text GLabel 1300 2350 0    50   Input ~ 0
+AC1
+Text GLabel 1300 2450 0    50   Input ~ 0
+AC2
+Text GLabel 1250 2550 0    50   Input ~ 0
+FP
+Wire Wire Line
+	1450 2350 1300 2350
+Wire Wire Line
+	1450 2450 1300 2450
+Wire Wire Line
+	1450 2550 1250 2550
+Text GLabel 1900 4550 0    50   Input ~ 0
+FP
+Text GLabel 3800 4450 0    50   Input ~ 0
+AC1
+Text GLabel 3800 5100 0    50   Input ~ 0
+AC1
+Wire Wire Line
+	4000 4450 3800 4450
+Wire Wire Line
+	4000 5100 3800 5100
+Wire Wire Line
+	4000 4250 2850 4250
+Wire Wire Line
+	4000 4900 2850 4900
+Wire Wire Line
+	2550 4250 2200 4250
+Wire Wire Line
+	2200 4250 2200 4550
+Wire Wire Line
+	2200 4550 1900 4550
+Wire Wire Line
+	2550 4900 2200 4900
+Wire Wire Line
+	2200 4900 2200 4550
+Connection ~ 2200 4550
+Wire Notes Line
+	5850 3600 5850 5500
+Wire Notes Line
+	5850 5500 1600 5500
+Wire Notes Line
+	1600 5500 1600 3600
+Wire Notes Line
+	1600 3600 5850 3600
+Text Notes 1650 5450 0    50   ~ 0
+Partie Haute Tension
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5FB4BFDB
+P 1400 1450
+F 0 "#FLG0103" H 1400 1525 50  0001 C CNN
+F 1 "PWR_FLAG" H 1400 1623 50  0000 C CNN
+F 2 "" H 1400 1450 50  0001 C CNN
+F 3 "~" H 1400 1450 50  0001 C CNN
+	1    1400 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 1450
+Wire Wire Line
+	1400 1450 1300 1450
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5FB4CB58
+P 1400 1650
+F 0 "#FLG0104" H 1400 1725 50  0001 C CNN
+F 1 "PWR_FLAG" H 1400 1823 50  0000 C CNN
+F 2 "" H 1400 1650 50  0001 C CNN
+F 3 "~" H 1400 1650 50  0001 C CNN
+	1    1400 1650
+	-1   0    0    1   
+$EndComp
+Connection ~ 1400 1650
+Wire Wire Line
+	1400 1650 1300 1650
+Wire Wire Line
+	2500 1400 3000 1400
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5FB5416B
+P 2500 1700
+F 0 "#FLG0101" H 2500 1775 50  0001 C CNN
+F 1 "PWR_FLAG" H 2500 1873 50  0000 C CNN
+F 2 "" H 2500 1700 50  0001 C CNN
+F 3 "~" H 2500 1700 50  0001 C CNN
+	1    2500 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2500 1700 2500 1650
+Connection ~ 2500 1650
+Wire Wire Line
+	2500 1650 2800 1650
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5FB56AA1
+P 2500 1550
+F 0 "#FLG0102" H 2500 1625 50  0001 C CNN
+F 1 "PWR_FLAG" V 2500 1678 50  0000 L CNN
+F 2 "" H 2500 1550 50  0001 C CNN
+F 3 "~" H 2500 1550 50  0001 C CNN
+	1    2500 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2500 1550 2500 1450
+Connection ~ 2500 1450
+Text Label 3200 4250 0    50   ~ 0
+FP-Neg
+Text Label 3200 4900 0    50   ~ 0
+FP-Positive
+$EndSCHEMATC
